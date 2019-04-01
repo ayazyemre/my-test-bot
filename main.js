@@ -31,7 +31,7 @@ app.post('/action-endpoint', function (req, res) {
   console.log(req.body.event);
 
   if (req.body.event.subtype != 'bot_message') { // se we won't reply to ourselves...
-    request.get('https://api.coindesk.com/v1/bpi/currentprice/EUR.json', function(err, res, body) {
+    request.get('https://api.coindesk.com/v1/bpi/currentprice/USD.json', function(err, res, body) {
       if (err) {
         console.log(err);
       }
