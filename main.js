@@ -28,7 +28,7 @@ app.post('/action-endpoint', function (req, res) {
     'Authorization': `Bearer ${process.env.TOKEN}` // this token you need to set on heroku
   }
 
-  // console.log(req.body.event);
+  console.log(req.body.event);
 
   if (req.body.event.subtype != 'bot_message') { // se we won't reply to ourselves...
     request.get('https://api.coindesk.com/v1/bpi/currentprice/EUR.json', function(err, res, body) {
