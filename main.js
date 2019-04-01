@@ -41,7 +41,7 @@ app.post('/action-endpoint', function (req, res) {
         const multiplier = req.body.event.text;
         const reply = {
           'channel': req.body.event.channel,
-          text: `Current BTC rate: ${rate*multiplier} USD per ${multiplier} BTC`
+          text: `${multiplier} BTC is ${rate*multiplier} USD `
         }
 
         const options = {
